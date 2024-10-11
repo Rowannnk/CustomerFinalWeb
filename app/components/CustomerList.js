@@ -1,4 +1,3 @@
-import moment from "moment/moment";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { FaPlus, FaEdit, FaTrash } from "react-icons/fa"; // Importing icons
@@ -163,10 +162,7 @@ export default function CustomerList() {
                   <span className="hover:underline">{customer.name}</span>
                 </Link>
               </td>
-              <td className="border-b py-2">
-                {moment(customer.dateOfBirth).format("DD/MM/YYYY")}{" "}
-                {/* Format date here */}
-              </td>
+
               <td className="border-b py-2">{customer.interests.join(", ")}</td>
               <td className="border-b py-2">
                 <div className="flex items-center">
